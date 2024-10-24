@@ -404,7 +404,6 @@ func (t *Table) newField(sf reflect.StructField, tag tagparser.Tag) *Field {
 	if s, ok := tag.Option("column"); ok {
 		sqlName = s
 	}
-	sqlName = prefix + sqlName
 
 	for name := range tag.Options {
 		if !isKnownFieldOption(name) {
